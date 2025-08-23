@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>めも雀（メモ雀）— 麻雀の成績・点数・収支をカンタン記録＆自動集計</title>
 <meta name="description" content="めも雀（メモ雀）は、麻雀の成績・点数・収支を手軽に記録できるiOSアプリ。スコア・対局結果を入力するだけで、自動計算・集計・グラフ化。4人麻雀・3人麻雀対応。レートもカバー。メモ感覚でサクッと管理。" />
 <meta name="apple-itunes-app" content="app-id=6749372126">
@@ -18,13 +18,13 @@
 </head>
 
 <body class="theme-light">
-<header class="site-header reveal">
+<header class="site-header reveal" id="site-header">
   <div class="container header-inner">
     <a class="brand" href="#top" aria-label="トップへ">
       <img class="logo-img" src="assets/ios_icon.png" alt="" aria-hidden="true">
       <span class="name">めも雀</span>
     </a>
-    <nav class="nav">
+    <nav class="nav" aria-label="メインナビゲーション">
       <a class="nav-link" href="#features">アプリの特徴</a>
       <a class="nav-link" href="#howto">使い方</a>
       <a class="nav-link" href="#design">デザイン</a>
@@ -42,27 +42,31 @@
     <div class="container hero-inner">
       <div class="hero-copy reveal">
         <div class="eyebrow">iOS対応 / 麻雀スコア・収支管理アプリ</div>
-        <h1 class="catch">麻雀の<span class="underline">成績・点数・収支</span><br>メモ感覚で記録。</h1>
+        <h1 class="catch">麻雀の<br><span class="underline">成績・点数・収支・スコア</span><br>をメモ感覚で記録。</h1>
         <p class="sub">対局の結果を入力するだけで、<br>自動で集計・グラフ化。<br class="br-sm" />四麻・三麻・レートにも対応。</p>
-        <div class="cta" style="padding: 20px;">
+        <div class="cta">
           <a class="appstore-badge big" href="https://apps.apple.com/jp/app/id6749372126" target="_blank" rel="noopener" aria-label="App Storeでダウンロード">
             <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
           </a>
         </div>
       </div>
 
+      <!-- ▼ ヒーローのスクリーンショット（ライト/ダーク：PCは縦2枚、タブレットは横2枚、SPは縦1列） -->
       <figure class="device reveal" aria-label="アプリのスクリーンショット">
-        <div class="stage">
-          <div class="phone main"><img id="hero-shot" src="assets/editor-light.png" alt="対局結果登録（ライト）" /></div>
-          <div class="phone side one"><img src="assets/stats-dark.png" alt="統計（ダーク）" /></div>
-          <div class="phone side two"><img src="assets/detail.png" alt="詳細（ライト）" /></div>
+        <div class="stage duo">
+          <div class="phone one">
+            <img src="assets/editor-light.png" alt="入力・編集（ライト）" />
+          </div>
+          <div class="phone two">
+            <img src="assets/stats-dark.png" alt="統計（ダーク）" />
+          </div>
         </div>
       </figure>
     </div>
   </section>
 
   <!-- Feature highlights -->
-  <section class="section features" id="features">
+  <section class="section features" id="features" aria-label="アプリの特徴">
     <div class="container">
       <div class="section-head reveal">
         <h2>アプリの特徴</h2>
@@ -107,15 +111,13 @@
           <div class="phone sm"><img src="assets/editor-light.png" alt="入力（ライト）"></div>
           <div class="phone sm"><img src="assets/stats-dark.png" alt="統計（ダーク）"></div>
           <div class="phone sm"><img src="assets/list-dark.png" alt="一覧（ダーク）"></div>
-          <div class="phone sm"><img src="assets/detail.png" alt="詳細（ライト）"></div>
         </div>
-        <p class="shelf-note">※ スクリーンショットはイメージです</p>
       </div>
     </div>
   </section>
 
   <!-- How to -->
-  <section class="section howto" id="howto">
+  <section class="section howto" id="howto" aria-label="使い方">
     <div class="container">
       <div class="section-head reveal">
         <h2>使い方は、たったの3ステップ</h2>
@@ -150,8 +152,21 @@
     </div>
   </section>
 
+  <!-- Design -->
+  <section class="section design" id="design" aria-label="デザイン">
+    <div class="container narrow reveal">
+      <h2>デザイン</h2>
+      <p class="lede">シンプルで見やすく、打牌の合間でも素早く記録できるUI。</p>
+      <ul class="principles">
+        <li>一画面一アクション</li>
+        <li>昼夜での視認性</li>
+        <li>入力よりも閲覧の効率</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- Privacy -->
-  <section class="section privacy" id="privacy">
+  <section class="section privacy" id="privacy" aria-label="プライバシー">
     <div class="container narrow reveal">
       <h2>プライバシーにも配慮</h2>
       <ul class="checklist">
@@ -163,7 +178,7 @@
   </section>
 
   <!-- CTA -->
-  <section class="section cta" id="cta">
+  <section class="section cta" id="cta" aria-label="ダウンロード">
     <div class="container reveal">
       <h2>麻雀ライフを記録して<br>もっと楽しく。</h2>
       <a class="appstore-badge big" href="https://apps.apple.com/jp/app/id6749372126" target="_blank" rel="noopener" aria-label="App Storeでダウンロード">
@@ -181,14 +196,13 @@
       <span class="name">めも雀</span>
     </a>
     <div class="links">
-      <a href="#features">特徴</a>
-      <a href="#howto">使い方</a>
-      <a href="#design">デザイン</a>
-      <a href="#privacy">プライバシー</a>
+      <a class="nav-link" href="#features">特徴</a>
+      <a class="nav-link" href="#howto">使い方</a>
+      <a class="nav-link" href="#design">デザイン</a>
+      <a class="nav-link" href="#privacy">プライバシー</a>
       <a href="https://apps.apple.com/jp/app/id6749372126" target="_blank" rel="noopener">App Store</a>
     </div>
 
-    <!-- 開発者情報：X（Twitter）リンク（白ロゴ画像＋黒背景） -->
     <div class="social">
       <a class="social-link" href="https://x.com/ani_yo_me" target="_blank" rel="noopener me" aria-label="X（Twitter）で @ani_yo_me">
         <span class="x-mark" aria-hidden="true">
